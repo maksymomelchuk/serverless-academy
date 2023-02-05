@@ -3,6 +3,7 @@ import * as dotenv from 'dotenv'
 import { program } from 'commander'
 dotenv.config()
 
+// Enter your values
 const token = process.env.BOT_TOKEN
 const chatId = process.env.CHAT_ID
 
