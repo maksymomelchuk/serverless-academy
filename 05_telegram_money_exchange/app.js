@@ -3,6 +3,7 @@ import * as dotenv from 'dotenv'
 import { getExchangeRate } from './api.js'
 dotenv.config()
 
+// Enter your data here
 const token = process.env.BOT_TOKEN
 const chatId = process.env.CHAT_ID
 
