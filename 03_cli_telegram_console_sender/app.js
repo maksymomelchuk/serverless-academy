@@ -1,20 +1,18 @@
-import TelegramBot from 'node-telegram-bot-api'
-import * as dotenv from 'dotenv'
 import { program } from 'commander'
-dotenv.config()
 
-// Enter your values
-const token = process.env.BOT_TOKEN
-const chatId = process.env.CHAT_ID
+import TelegramBot from 'node-telegram-bot-api'
+
+//! Enter your values
+const token = ''
+let chatId = ''
 
 const bot = new TelegramBot(token, { polling: true })
 
 program
+  .version('0.0.1')
   .option('-m, --message <message>', 'Send message to telegram bot')
   .option('-p, --photo <path>', 'Send photo to telegram bot')
-  .option('-h, --help', 'Show options')
-
-program.parse(process.argv)
+  .parse(process.argv)
 
 const argv = program.opts()
 
