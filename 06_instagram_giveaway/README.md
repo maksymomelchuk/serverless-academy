@@ -18,9 +18,10 @@ You need:
 
 Your program should have 3 different functions that return an integer. For example:
 
-uniqueValues(); // returns 1234
-existInAllFiles(); // returns 42
-existInAtleastTen(); // returns 50
-⚠️ **NOTE**: Make sure you measure the performance of your program.
+- uniqueValues(); // returns 1234
+- existInAllFiles(); // returns 42
+- existInAtleastTen(); // returns 50
+
+  ⚠️ **NOTE**: Make sure you measure the performance of your program.
 
 If it takes more than a few seconds to process, you are doing something wrong. Also, report the elapsed time in the program’s output.
