@@ -1,20 +1,15 @@
 import TelegramBot from 'node-telegram-bot-api'
-import * as dotenv from 'dotenv'
 import { getExchangeRate } from './api.js'
-dotenv.config()
 
-// Enter your data here DUMMY DATA
-const token = process.env.BOT_TOKEN
-const chatId = process.env.CHAT_ID
+// ! Insert your telegram token here
+const token = ''
 
 // Create a bot that uses 'polling' to fetch new updates
 const bot = new TelegramBot(token, { polling: true })
 
-// await bot.sendMessage(msg.chat.id, '/start', {
-//   reply_markup: {
-//     keyboard: [['/start']],
-//   },
-// })
+bot.setMyCommands([
+  { command: '/start', description: 'Want to check weather?' },
+])
 
 bot.on('message', (msg) => {
   if (msg.text.toString().toLowerCase().includes('курс')) {
