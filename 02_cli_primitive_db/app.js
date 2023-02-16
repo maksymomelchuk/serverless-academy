@@ -40,7 +40,7 @@ const ask = () => {
     .prompt({
       type: 'input',
       name: 'name',
-      message: 'What is your name?',
+      message: 'What is your name? To cancel press ENTER',
     })
     .then((answer) => {
       user.name = answer.name
