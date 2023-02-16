@@ -17,7 +17,7 @@ await bot.sendMessage(chatId, 'Forecast in Brovary ♥:', {
 
 bot.on('message', (msg) => {
   if (msg.text.toString().toLowerCase().includes('brovary')) {
-    bot.sendMessage(msg.chat.id, 'Choose time period', {
+    bot.sendMessage(chatId, 'Choose time period', {
       reply_markup: {
         keyboard: [['3 hours'], ['6 hours']],
       },
@@ -35,7 +35,7 @@ bot.on('message', async (msg) => {
     }
 
     bot.sendMessage(
-      msg.chat.id,
+      chatId,
       `Weather forecast with ${interval} hours interval:\n\n${dataToDisplay
         .slice(0, 21)
         .map((el) => {
@@ -43,9 +43,9 @@ bot.on('message', async (msg) => {
             main: { temp, feels_like, pressure, humidity },
             dt_txt,
           } = el
-          return `Дата та час: ${dt_txt}\nТемпература повітря: ${temp}\nВідчувається як: ${feels_like}\nАтмосферний тиск: ${pressure}\nВологість повітря: ${humidity}`
+          return `📅Дата та час: ${dt_txt}\n🌡Температура повітря: ${temp}°\n🌪Атмосферний тиск: ${pressure}мбар\n💦Вологість повітря: ${humidity}%`
         })
-        .join('\n\n')}`
+        .join('\n------\n')}`
     )
   }
 })

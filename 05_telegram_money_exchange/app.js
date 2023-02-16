@@ -10,11 +10,11 @@ const chatId = process.env.CHAT_ID
 // Create a bot that uses 'polling' to fetch new updates
 const bot = new TelegramBot(token, { polling: true })
 
-await bot.sendMessage(chatId, 'Обмін валют', {
-  reply_markup: {
-    keyboard: [['Курс валют']],
-  },
-})
+// await bot.sendMessage(msg.chat.id, '/start', {
+//   reply_markup: {
+//     keyboard: [['/start']],
+//   },
+// })
 
 bot.on('message', (msg) => {
   if (msg.text.toString().toLowerCase().includes('курс')) {
@@ -40,8 +40,8 @@ bot.on('message', async (msg) => {
   }
 })
 
-bot.onText(/\/start/, () => {
-  bot.sendMessage(chatId, 'Обмін валют', {
+bot.onText(/\/start|start/, (msg) => {
+  bot.sendMessage(msg.chat.id, 'Обмін валют', {
     reply_markup: {
       keyboard: [['Курс валют']],
     },
