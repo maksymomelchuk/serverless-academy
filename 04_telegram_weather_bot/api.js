@@ -1,8 +1,8 @@
 import axios from 'axios'
-import * as dotenv from 'dotenv'
-dotenv.config()
 
-const api_key = process.env.API_KEY
+// ! Insert your api key here
+const api_key = ''
+
 const lat = '50.51'
 const long = '30.79'
 
