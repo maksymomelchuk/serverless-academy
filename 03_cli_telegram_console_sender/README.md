@@ -15,13 +15,13 @@ Here is the list of commands that your app should support
 
 ### Send a message
 
-#### node app.js 'Your message'
+Run: **node app.js -m** or **--message 'Your message'**
 
 The result of executing this command is the appearance of your message in your Telegram bot. After it has been executed, the CLI terminates the process itself to allow you to enter the next command.
 
 ### Send a photo
 
-#### node app.js **-p** or **--message** '/path/to/the/photo.png'
+Run: **node app.js -p** or **--photo '/path/to/the/photo.png'**
 
 The result of this command is a photo sent to the Telegram bot from your PC. After it has been executed, the CLI terminates the process itself to allow you to enter the next command.
 
